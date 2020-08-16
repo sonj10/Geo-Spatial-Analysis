@@ -1,12 +1,5 @@
 # CSE512-Project-Hotspot-Analysis-Template
 
-#### Version history
-v1.2 Update the readme to work with Canvas
-v1.1, Nov 16, Fix a bug in "Entrace.scala"
-
-v1.0, Nov 13, Initial version
-
-
 ## Requirement
 
 In this phase, you are required to do spatial hot spot analysis. In particular, you need to complete two different hot spot analysis tasks 
