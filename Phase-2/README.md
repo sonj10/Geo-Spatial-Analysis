@@ -1,4 +1,4 @@
-# CSE512-Project-Hotspot-Analysis-Template
+# Project-Phase2
 
 ### Hot zone analysis
 
