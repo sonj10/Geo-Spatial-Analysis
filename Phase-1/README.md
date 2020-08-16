@@ -3,7 +3,7 @@
 
 ## Requirement
 
-In Project Phase 2, you need to write two User Defined Functions ST\_Contains and ST\_Within in SparkSQL and use them to do four spatial queries:
+We have written two User Defined Functions ST\_Contains and ST\_Within in SparkSQL and used them to do four spatial queries:
 
 * Range query: Use ST_Contains. Given a query rectangle R and a set of points P, find all the points within R.
 * Range join query: Use ST_Contains. Given a set of Rectangles R and a set of Points S, find all (Point, Rectangle) pairs such that the point is within the rectangle.
@@ -68,22 +68,3 @@ select *
 from point p1, point p2 
 where ST_Within(p1._c0, p2._c0, 10)
 ```
-
-### 4. Run your code on Apache Spark using "spark-submit"
-
-If you are using the Scala template, note that:
-
-1. You **only have to replace the logic** (currently is "true") in all User Defined Function.
-2. The main function in this template takes **dynamic length of parameters** as follows:
-	* Output file path (**Mandatory**): ```/Users/ubuntu/Downloads/output```
-	* Range query data file path, query window: ```rangequery /Users/ubuntu/Downloads/arealm.csv -155.940114,19.081331,-155.618917,19.5307```
-	* Range join query data file path, range join query window data file path: ```rangejoinquery /Users/ubuntu/Downloads/arealm.csv /Users/ubuntu/Downloads/zcta510.csv```
-	* Distance query data file path, query point, distance: ```distancequery /Users/ubuntu/Downloads/arealm.csv -88.331492,32.324142 10```
-	* Distance join query data A file path, distance join query data B file path, distance: ```distancejoinquery /Users/ubuntu/Downloads/arealm.csv /Users/ubuntu/Downloads/arealm.csv 10```
-3. The number of queries and the order of queries in the input **do not matter**. The code template will detect the corresponding query and call it!
-4. Two example datasets are put in "src/resources" folder. arealm10000 is a point dataset and zcta10000 is a rectangle dataset. You can can use them to test your code but eventually you must run your code on NYC taxi trip dataset. Our auto-grading system will also run your code on many different datasets.
-5. Here is an example that tells you how to submit your jar using "spark-submit"
-```
-./bin/spark-submit CSE512-Project-Phase2-Template-assembly-0.1.0.jar result/output rangequery src/resources/arealm10000.csv -93.63173,33.0183,-93.359203,33.219456 rangejoinquery src/resources/arealm10000.csv src/resources/zcta10000.csv distancequery src/resources/arealm10000.csv -88.331492,32.324142 1 distancejoinquery src/resources/arealm10000.csv src/resources/arealm10000.csv 0.1
-```
-6. A test case file is given: ``exampleinput``. A correct answer is given: ``exampleanswer``
