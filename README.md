@@ -4,5 +4,5 @@ Devised algorithms for executing multiple spatial queries like hot zone and hot 
 
 ![Design](/images/design.jpg)
 <pre>
-                                                   Architecture Design
+                                                 Figure:  Architecture Design
 </pre>
