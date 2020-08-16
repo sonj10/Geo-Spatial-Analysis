@@ -1,35 +1,29 @@
 # CSE512-Project-Hotspot-Analysis-Template
 
-## Requirement
-
-In this phase, you are required to do spatial hot spot analysis. In particular, you need to complete two different hot spot analysis tasks 
-
-
 ### Hot zone analysis
-This task will needs to perform a range join operation on a rectangle datasets and a point dataset. For each rectangle, the number of points located within the rectangle will be obtained. The hotter rectangle means that it include more points. So this task is to calculate the hotness of all the rectangles. 
+
+We perform a range join operation on a rectangle datasets and a point dataset. For each rectangle, the number of points located within the rectangle will be obtained. The hotter rectangle means that it include more points. So this task is to calculate the hotness of all the rectangles. 
 
 ### Hot cell analysis
 
-#### Description
 This task will focus on applying spatial statistics to spatio-temporal big data in order to identify statistically significant spatial hot spots using Apache Spark. The topic of this task is from ACM SIGSPATIAL GISCUP 2016.
 
 The Problem Definition page is here: [http://sigspatial2016.sigspatial.org/giscup2016/problem](http://sigspatial2016.sigspatial.org/giscup2016/problem) 
 
 The Submit Format page is here: [http://sigspatial2016.sigspatial.org/giscup2016/submit](http://sigspatial2016.sigspatial.org/giscup2016/submit)
 
-Note that: You may clip the source data to an envelope (latitude 40.5N – 40.9N, longitude 73.7W – 74.25W) encompassing the New York City in order to remove some of the noisy error data.
+Note that: We clip the source data to an envelope (latitude 40.5N – 40.9N, longitude 73.7W – 74.25W) encompassing the New York City in order to remove some of the noisy error data.
 
 #### Special requirement (different from GIS CUP)
-As stated in the Problem Definition page, in this task, you are asked to implement a Spark program to calculate the Getis-Ord statistic of NYC Taxi Trip datasets. We call it "**Hot cell analysis**"
+As stated in the Problem Definition page, in this task, we implement a Spark program to calculate the Getis-Ord statistic of NYC Taxi Trip datasets. We call it "**Hot cell analysis**"
 
 To reduce the computation power need，we made the following changes:
 
 1. The input will be a monthly taxi trip dataset from 2009 - 2012. For example, "yellow\_tripdata\_2009-01\_point.csv", "yellow\_tripdata\_2010-02\_point.csv".
 2. Each cell unit size is 0.01 * 0.01 in terms of latitude and longitude degrees.
-3. You should use 1 day as the Time Step size. The first day of a month is step 1. Every month has 31 days.
-4. You only need to consider Pick-up Location.
+3. We use 1 day as the Time Step size. The first day of a month is step 1. Every month has 31 days.
+4. We only consider Pick-up Location.
 5. We don't use Jaccard similarity to check your answer.
-However, you don't need to worry about how to decide the cell coordinates because the code template generated cell coordinates. You just need to write the rest of the task.
 
 ## Coding template specification
 
@@ -48,7 +42,6 @@ Note:
 
 1. The number/order of tasks do not matter.
 2. But, the first 7 of our final test cases on Vocareum will be hot zone analysis, the last 8 will be hot cell analysis.
-
 
 
 
