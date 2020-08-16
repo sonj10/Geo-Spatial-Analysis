@@ -22,7 +22,7 @@ Input: pointString:String, queryRectangle:String
 
 Output: Boolean (true or false)
 
-Definition: We parse the pointString (e.g., "-88.331492,32.324142") and queryRectangle (e.g., "-155.940114,19.081331,-155.618917,19.5307") and check whether the queryRectangle fully contains the point.
+Definition: We parse pointString (e.g., "-88.331492,32.324142") and queryRectangle (e.g., "-155.940114,19.081331,-155.618917,19.5307") and check whether the queryRectangle fully contains the point.
 
 ### 2. ST_Within
 
@@ -30,7 +30,7 @@ Input: pointString1:String, pointString2:String, distance:Double
 
 Output: Boolean (true or false)
 
-Definition: We parse the pointString1 (e.g., "-88.331492,32.324142") and pointString2 (e.g., "-88.331492,32.324142") and check whether the two points are within the given distance. We assume all coordinates are on a planar space and calculated their Euclidean distance.
+Definition: We parse pointString1 (e.g., "-88.331492,32.324142") and pointString2 (e.g., "-88.331492,32.324142") and check whether the two points are within the given distance. We assume all coordinates are on a planar space and calculate their Euclidean distance.
 
 ### 3. Spatial Quries using SparkSQL
 
