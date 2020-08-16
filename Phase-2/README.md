@@ -71,7 +71,7 @@ All zones with their count, sorted by "rectangle" string in an ascending order.
 
 
 #### Hot cell analysis
-The coordinates of top 50 hotest cells sorted by their G score in a descending order. Note, DO NOT OUTPUT G score.
+The coordinates of top 50 hotest cells sorted by their G score in a descending order.
 
 ```
 -7399,4075,15
