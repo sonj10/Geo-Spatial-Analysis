@@ -11,13 +11,8 @@ We have written two User Defined Functions ST\_Contains and ST\_Within in SparkS
 * Distance join query: Use ST_Within. Given a set of Points S1 and a set of Points S2 and a distance D in km, find all (s1, s2) pairs such that s1 is within a distance D from s2 (i.e., s1 belongs to S1 and s2 belongs to S2).
 
 
-A Scala SparkSQL code template is given. You must start from the template. 	A Scala SparkSQL code template is given. You must start from the template. The main code is in "SparkSQLExample.scala"
-
 ### The main function is in "SparkSQLExample.scala".
-
-### The User Defined Functions that you need to implement are in "SpatialQuery.scala". Replace the query part with your code from the old template.
-
-
+### The User Defined Functions that we have implemented are in "SpatialQuery.scala". 
 
 The detailed requirements are as follows:
 
@@ -27,7 +22,7 @@ Input: pointString:String, queryRectangle:String
 
 Output: Boolean (true or false)
 
-Definition: You first need to parse the pointString (e.g., "-88.331492,32.324142") and queryRectangle (e.g., "-155.940114,19.081331,-155.618917,19.5307") to a format that you are comfortable with. Then check whether the queryRectangle fully contains the point. Consider on-boundary point.
+Definition: We parse the pointString (e.g., "-88.331492,32.324142") and queryRectangle (e.g., "-155.940114,19.081331,-155.618917,19.5307") and check whether the queryRectangle fully contains the point.
 
 ### 2. ST_Within
 
@@ -35,11 +30,9 @@ Input: pointString1:String, pointString2:String, distance:Double
 
 Output: Boolean (true or false)
 
-Definition: You first need to parse the pointString1 (e.g., "-88.331492,32.324142") and pointString2 (e.g., "-88.331492,32.324142") to a format that you are comfortable with. Then check whether the two points are within the given distance. Consider on-boundary point. To simplify the problem, please assume all coordinates are on a planar space and calculate their Euclidean distance.
+Definition: We to parse the pointString1 (e.g., "-88.331492,32.324142") and pointString2 (e.g., "-88.331492,32.324142") and check whether the two points are within the given distance. We assume all coordinates are on a planar space and calculated their Euclidean distance.
 
-### 3. Use Your UDF in SparkSQL
-
-The code template has loaded the original data (point data, arealm.csv, and rectangle data, zcta510.csv) into DataFrame using tsv format. You don't need to worry about the loading phase.
+### 3. Spatial Quries using SparkSQL
 
 Range query:
 ```
